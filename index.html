@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <title>Encriptador de texto</title>
+  </head>
+  <body>
+
+    <header class="header">
+
+      <div class="logo-container">
+          <img src="logo-alura.png" alt="Logo">
+        </div>
+        
+        <div class="texto-Logo" >
+                <h1></h1>
+                
+        </div>
+          
+
+      </div>
+  
+  </header>
+
+
+    <main class="main">
+
+      
+      <section class="main__section--encriptador">
+        
+        <textarea id="textoEntrada" class="encriptador__textarea--encriptar" placeholder="Ingrese el texto aquí"></textarea>
+        <div id="dialogo" class="dialogo-oculto">Mensaje personalizado</div>
+
+        <div class="encriptador__mensaje">
+
+          <p class="info-text">
+            <i class="fas fa-info-circle"></i> Solo letras minúsculas (sin caracteres especiales) y sin acentos.
+          </p>
+          
+        </div>
+
+        <div class="encriptador__buttons">
+          <button id="botonEncriptar" class="main__buttons encriptador__button--encriptar" onclick="encriptarTexto();">Encriptar</button>
+          <button id="botonDesencriptar" class="main__buttons encriptador__button--desencriptar" onclick="desencriptarTexto()">Desencriptar</button>
+
+        </div>
+      </section>
+
+      <section class="main__section--resultado">
+        <textarea id="textoResultado" class="resultado__textarea--desencriptar" style="display: none;"></textarea>
+        <img id="resultadoImagen" src="imagen01.png" alt="imagen de Panel Derecho" class="resultado__imagen">
+        <div id="resultadoInformacion" class="resultado__informacion">
+          <p class="resultado__texto-negrita">Ningún mensaje fue encontrado</p>
+          <p class="resultado__texto-mensaje">Ingresa el texto que desees encriptar o desencriptar.</p>
+        </div>
+        <span id="mensajeCopiado" class="resultado__texto-copiado" style="display: none;">Texto copiado!</span>
+        <button id="botonCopiar" class="main__buttons resultado__button--copiar" onclick="copiarTexto();" style="display: none;">Copiar</button>
+      </section>      
+    </main>
+    <footer class="footer">
+      <p class="footer__info"> &copy; ASCHERI CORTES LEONARDO / Alura Latam 2024 </p>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
+
+
